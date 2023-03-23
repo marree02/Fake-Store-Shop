@@ -1,0 +1,156 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("bg-pattern.jpg");
+}
+
+a {
+    color: #ff5e6c;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #0e4c92;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    color: #0e4c92;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #ff5e6c;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header styles */
+
+header {
+    background-color: #fff;
+    color: #0e4c92;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 48px;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 40px;
+}
+
+header nav ul li:first-child {
+    margin-left: 0;
+}
+
+header nav ul li a {
+    font-size: 24px;
+    color: #0e4c92;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: #ff5e6c;
+}
+
+/* Main content styles */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f5f5f5;
+}
+
+main ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+main ul li h3 {
+    font-size: 36px;
+    margin: 10px 0;
+    color: #0e4c92;
+}
+
+main ul li p {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #666;
+}
+
+main ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ff5;
+    text-decoration: none;
+}
+
+main ul li a:hover {
+    color: #0e4c92;
+}
+
+/* Product details styles */
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 36px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: #0e4c92;
+}
+
+section img {
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+  
     <meta charset="UTF-8">
     <title>My Store</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <header>
@@ -10,14 +12,14 @@
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
+          <li><a href="#products">Products</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h2>Products</h2>
+      <h2>Featured Products</h2>
       <ul>
         <li>
           <a href="#product1">
@@ -42,6 +44,32 @@
         </li>
       </ul>
     </main>
+    <section id="products">
+      <h2>Products</h2>
+      <ul>
+        <li>
+          <a href="#product1">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>A brief description of Product 1.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#product2">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>A brief description of Product 2.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#product3">
+            <img src="product3.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>A brief description of Product 3.</p>
+          </a>
+        </li>
+      </ul>
+    </section>
     <section id="product1">
       <h2>Product 1</h2>
       <img src="product1.jpg" alt="Product 1">
@@ -59,3 +87,4 @@
     </section>
   </body>
 </html>
+
