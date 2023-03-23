@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-  
     <meta charset="UTF-8">
     <title>My Store</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer type="module" src="script.js"></script>
   </head>
   <body>
     <header>
@@ -20,8 +21,8 @@
     </header>
     <main>
       <h2>Featured Products</h2>
-      <ul>
-        <li>
+      <ul id="featured-list">
+        <!--<li>
           <a href="#product1">
             <img src="product1.jpg" alt="Product 1">
             <h3>Product 1</h3>
@@ -31,8 +32,9 @@
         <li>
           <a href="#product2">
             <img src="product2.jpg" alt="Product 2">
-            <h3>Product 2</h3>
-            <p>A brief description of Product 2.</p>
+              <h3>Product 2</h3>
+              <p>A brief description of Product 2.</p>
+
           </a>
         </li>
         <li>
@@ -41,13 +43,24 @@
             <h3>Product 3</h3>
             <p>A brief description of Product 3.</p>
           </a>
-        </li>
+        </li>-->
       </ul>
     </main>
     <section id="products">
-      <h2>Products</h2>
-      <ul>
-        <li>
+      <div>
+        <h2>Products</h2>
+        <label>
+          <select id="filter-select" class="select-filter">
+              <option value="all">All</option>
+              <option value="electronics">Electronics</option>
+              <option value="jewelery">Jewelery</option>
+              <option value="mens-clothing">Men's Clothing</option>
+              <option value="womens-clothing">Women's Clothing</option>
+          </select>
+        </label>
+      </div>
+      <ul id="products-list">
+        <!--<li>
           <a href="#product1">
             <img src="product1.jpg" alt="Product 1">
             <h3>Product 1</h3>
@@ -67,23 +80,8 @@
             <h3>Product 3</h3>
             <p>A brief description of Product 3.</p>
           </a>
-        </li>
+        </li>-->
       </ul>
-    </section>
-    <section id="product1">
-      <h2>Product 1</h2>
-      <img src="product1.jpg" alt="Product 1">
-      <p>A detailed description of Product 1.</p>
-    </section>
-    <section id="product2">
-      <h2>Product 2</h2>
-      <img src="product2.jpg" alt="Product 2">
-      <p>A detailed description of Product 2.</p>
-    </section>
-    <section id="product3">
-      <h2>Product 3</h2>
-      <img src="product3.jpg" alt="Product 3">
-      <p>A detailed description of Product 3.</p>
     </section>
   </body>
 </html>
