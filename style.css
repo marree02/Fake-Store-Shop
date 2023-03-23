@@ -181,6 +181,7 @@ section li {
 
 .product-image {
     width: 14rem;
+    max-height: 14rem;
     padding: 2rem;
     margin: 1rem;
     border-radius: 5px;
