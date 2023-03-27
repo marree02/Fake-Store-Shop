@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Validation Form</title>
+  </head>
+  <body>
+    <form id="order-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" minlength="2" maxlength="50" required>
+      <br>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" maxlength="50" required>
+      <br>
+  
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" pattern="[\d\-()+ ]{10,50}" maxlength="50" required>
+      <br>
+  
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" minlength="4" maxlength="50" required>
+      <br>
+  
+      <label for="postal-code">Postal Code:</label>
+      <input type="text" id="postal-code" name="postal-code" pattern="[0-9]{3} [0-9]{2}" maxlength="6" required>
+      <br>
+  
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" minlength="2" maxlength="50" required>
+      <br>
+  
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("order-form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Validate name field
+  const nameInput = form.elements["name"];
+  const nameValue = nameInput.value.trim();
+  if (nameValue.length < 2 || nameValue.length > 50) {
+    nameInput.setCustomValidity("Name must be between 2 and 50 characters.");
+  } else {
+    nameInput.setCustomValidity("");
+  }
+
+  // Validate email field
+  const emailInput = form.elements["email"];
+  const emailValue = emailInput.value.trim();
+  if (!emailValue.includes("@") || emailValue.length > 50) {
+    emailInput.setCustomValidity("Email must contain @ and be less than 50 characters.");
+  } else {
+    emailInput.setCustomValidity("");
+  }
+
+  // Validate phone field
+  const phoneInput = form.elements["phone"];
+  const phoneValue = phoneInput.value.trim();
+  if (phoneValue.length < 10 || phoneValue.length > 50) {
+    phoneInput.setCustomValidity("Phone number must be between 10 and 50 characters.");
+  } else {
+    phoneInput.setCustomValidity("");
+  }
+
+  // Validate address field
+  const addressInput = form.elements["address"];
+  const addressValue = addressInput.value.trim();
+  if (addressValue.length < 4 || addressValue.length > 50) {
+    addressInput.setCustomValidity("Address must be between 4 and 50 characters.");
+  } else {
+    addressInput.setCustomValidity("");
+  }
+
+  // Validate postal code field
+  const postalCodeInput = form.elements["postal-code"];
+  const postalCodeValue = postalCodeInput.value.trim();
+  if (!postalCodeValue.match(/^\d{3}\s\d{2}$/)) {
+    postalCodeInput.setCustomValidity("Postal code must be in the format NNN NN.");
+  } else {
+    postalCodeInput.setCustomValidity("");
+  }
+
+  // Validate city field
+  const cityInput = form.elements["city"];
+  const cityValue = cityInput.value.trim();
+  if (cityValue.length < 2 || cityValue.length > 50) {
+    cityInput.setCustomValidity("City must be between 2 and 50 characters.");
+  } else {
+    cityInput.setCustomValidity("");
+  }
+
+  // Check if form is valid
+  if (form.checkValidity()) {
+    alert("Your order has been submitted.");
+    form.reset();
+    window.location.href = "index.html";
+  }
+});
+
+      </script>
+</head>
+  <body>
+    <form id="order-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" minlength="2" maxlength="50" required>
+      <br>
+      <label for="email">Email:</label>
+  <input type="email" id="email" name="email" maxlength="50" required>
+  <br>
+
+  <label for="phone">Phone:</label>
+  <input type="tel" id="phone" name="phone" pattern="[\d\-()+ ]{10,50}" maxlength="50" required>
+  <br>
+
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address" minlength="4" maxlength="50" required>
+  <br>
+
+  <label for="postal-code">Postal Code:</label>
+  <input type="text" id="postal-code" name="postal-code" pattern="[0-9]{3} [0-9]{2}" maxlength="6" required>
+  <br>
+
+  <label for="city">City:</label>
+  <input type="text" id="city" name="city" minlength="2" maxlength="50" required>
+  <br>
+
+  <button type="submit">Submit</button> 
+</form>
+</body>

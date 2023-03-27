@@ -81,6 +81,12 @@ const initPage = async () => {
 
 }
 
+function redirectToValidation() {
+    window.location.href = "validation.html";
+    
+  }
+  
+
 
 initPage();
 
