@@ -36,72 +36,62 @@
     <script>
       const form = document.getElementById("order-form");
 
-form.addEventListener("submit", function(event) {
-  event.preventDefault();
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-  // Validate name field
-  const nameInput = form.elements["name"];
-  const nameValue = nameInput.value.trim();
-  if (nameValue.length < 2 || nameValue.length > 50) {
-    nameInput.setCustomValidity("Name must be between 2 and 50 characters.");
-  } else {
-    nameInput.setCustomValidity("");
-  }
+        // Validate name field
+        const nameInput = form.elements["name"];
+        const nameValue = nameInput.value.trim();
+        if (nameValue.length < 2 || nameValue.length > 50) {
+          alert("Name must be between 2 and 50 characters.");
+          return;
+        }
 
-  // Validate email field
-  const emailInput = form.elements["email"];
-  const emailValue = emailInput.value.trim();
-  if (!emailValue.includes("@") || emailValue.length > 50) {
-    emailInput.setCustomValidity("Email must contain @ and be less than 50 characters.");
-  } else {
-    emailInput.setCustomValidity("");
-  }
+        // Validate email field
+        const emailInput = form.elements["email"];
+        const emailValue = emailInput.value.trim();
+        if (!emailValue.includes("@") || emailValue.length > 50) {
+          alert("Email must contain @ and be less than 50 characters.");
+          return;
+        }
 
-  // Validate phone field
-  const phoneInput = form.elements["phone"];
-  const phoneValue = phoneInput.value.trim();
-  if (phoneValue.length < 10 || phoneValue.length > 50) {
-    phoneInput.setCustomValidity("Phone number must be between 10 and 50 characters.");
-  } else {
-    phoneInput.setCustomValidity("");
-  }
+        // Validate phone field
+        const phoneInput = form.elements["phone"];
+        const phoneValue = phoneInput.value.trim();
+        if (phoneValue.length < 10 || phoneValue.length > 50) {
+          alert("Phone number must be between 10 and 50 characters.");
+          return;
+        }
 
-  // Validate address field
-  const addressInput = form.elements["address"];
-  const addressValue = addressInput.value.trim();
-  if (addressValue.length < 4 || addressValue.length > 50) {
-    addressInput.setCustomValidity("Address must be between 4 and 50 characters.");
-  } else {
-    addressInput.setCustomValidity("");
-  }
+        // Validate address field
+        const addressInput = form.elements["address"];
+        const addressValue = addressInput.value.trim();
+        if (addressValue.length < 4 || addressValue.length > 50) {
+          alert("Address must be between 4 and 50 characters.");
+          return;
+        }
 
-  // Validate postal code field
-  const postalCodeInput = form.elements["postal-code"];
-  const postalCodeValue = postalCodeInput.value.trim();
-  if (!postalCodeValue.match(/^\d{3}\s\d{2}$/)) {
-    postalCodeInput.setCustomValidity("Postal code must be in the format NNN NN.");
-  } else {
-    postalCodeInput.setCustomValidity("");
-  }
+        // Validate postal code field
+        const postalCodeInput = form.elements["postal-code"];
+        const postalCodeValue = postalCodeInput.value.trim();
+        if (!postalCodeValue.match(/^\d{3}\s\d{2}$/)) {
+          alert("Postal code must be in the format NNN NN.");
+          return;
+        }
 
-  // Validate city field
-  const cityInput = form.elements["city"];
-  const cityValue = cityInput.value.trim();
-  if (cityValue.length < 2 || cityValue.length > 50) {
-    cityInput.setCustomValidity("City must be between 2 and 50 characters.");
-  } else {
-    cityInput.setCustomValidity("");
-  }
+        // Validate city field
+        const cityInput = form.elements["city"];
+        const cityValue = cityInput.value.trim();
+        if (cityValue.length < 2 || cityValue.length > 50) {
+          alert("City must be between 2 and 50 characters.");
+          return;
+        }
 
-  // Check if form is valid
-  if (form.checkValidity()) {
-    alert("Your order has been submitted.");
-    form.reset();
-    window.location.href = "index.html";
-  }
-});
-
-      </script>
-</head>
-</form>
-</body>
+        // If all fields are valid, submit the form
+        alert("Your order has been submitted.");
+        form.reset();
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
