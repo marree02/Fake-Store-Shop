@@ -171,11 +171,10 @@ section li {
 }
 
 
-
-
 .product-item {
     display: flex;
     gap: 4rem;
+
 }
 
 
@@ -191,8 +190,58 @@ section li {
 .product-info {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
+.error-input {
+    border: 2px solid #ff5e6c;
+    outline: #ff5e6c;
+}
+
+/*.btn {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    border: 2px solid #0e4c92;
+    border-radius: 8px;
+    background-color: #0e4c92;
+    color: #fff;
+    cursor: pointer;
+    z-index: 400;
+    width: 12rem;
+}
+
+.btn:hover {
+    background-color: #ff5e6c;
+}
+
+.btn:hover a {
+    text-decoration: none;
+}*/
+
+
+#featured-list button {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 400;
+    width: 12rem;
+}
+
+#products button {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 400;
+    width: 100%;
+    max-width: 12rem;
+    margin: 1rem;
+}
 
 .select-filter {
     font-size: 1.4rem;
@@ -212,6 +261,80 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
+    font-weight: bold;
+}
 
+button:hover {
+    background-color: #ff5e6c;
+}
+
+#order-section {
+    display: flex;
+    border: 2px solid #0e4c92;
+    margin-top: 4rem;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+
+
+#order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    width: 50%;
+    align-items: center;
+}
+
+#order-form h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+
+#order-form button {
+    width: 40%;
+    height: 4rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+#order-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    border-radius: 8px;
+}
+
+#order-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    width: 20rem;
+    align-items: center;
+    margin-right: 4rem;
+}
+
+
+.form-group {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: center;
+}
+
+.form-group label {
+    width: 6rem;
+}
+
+.form-group input {
+    padding: 0.8rem;
+    border: 2px solid #0e4c92;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    width: 100%;
+    margin-right: 2rem;
+}
 

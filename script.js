@@ -22,14 +22,13 @@ Kategorierna som funkar finns i konstanterna ovanför
 const renderProducts = (products, target) => {
     target.innerHTML = products.map(product => {
         return `
-            <li>
-                <a href="#product1" class="product-item">
+            <li class="product-item" data-id="${product.id}">
                     <img class="product-image" src="${product.image}" alt="${product.title}">
                     <div class="product-info">
                         <h3>${product.title}</h3>
                         <p>${product.description}</p>
                     </div>
-                </a>
+                    <button class="js-buy-button">Buy</button>
             </li>
         `
     }).join("");
@@ -73,10 +72,11 @@ const initPage = async () => {
     const featuredProducts = await getLimitedProducts(3);
     const allProducts = await getAllProducts();
 
-    console.log(allProducts);
     renderFeaturedProducts(featuredProducts, featuredList)
     renderProducts(allProducts, productsList);
-
+    document.querySelectorAll('.js-buy-button').forEach(button => {
+        button.addEventListener('click', buyButtonHandler);
+    })
     filterSelect.addEventListener('change', selectHandler);
 
 }
@@ -84,7 +84,13 @@ const initPage = async () => {
 function redirectToValidation() {
     window.location.href = "validation.html";
     
-  }
+}
+
+function buyButtonHandler(e) {
+    const productId = e.target.parentElement.dataset.id;
+    localStorage.setItem('productId', productId);
+    redirectToValidation();
+}
   
 
 
