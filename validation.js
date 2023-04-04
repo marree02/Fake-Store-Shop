@@ -58,8 +58,17 @@ form.addEventListener("submit", function(event) {
     // If all fields are valid, submit the form
     alert("Your order has been submitted.");
     form.reset();
-    window.location.href = "index.html";
-    localStorage.removeItem('productId');
+    const confirmationData = {
+        name: nameValue,
+        email: emailValue,
+        phone: phoneValue,
+        address: addressValue,
+        postalCode: postalCodeValue,
+        city: cityValue,
+    }
+    localStorage.setItem("confirmationData", JSON.stringify(confirmationData));
+    window.location.href = "confirmation.html";
+
 });
 
 

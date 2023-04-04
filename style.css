@@ -288,7 +288,27 @@ button:hover {
     background-color: #ff5e6c;
 }
 
+#confirmation-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    padding: 4rem;
+    background: #fff;
+}
+
+
 /* Responsive styles */
+
+@media only screen and (max-width: 900px) {
+    header {
+        flex-direction: column;
+    }
+
+    #confirmation-section {
+        flex-direction: column;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     h1 {
@@ -300,8 +320,15 @@ button:hover {
         margin-bottom: 10px;
     }
 
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
     header nav ul li {
-        margin-left: 20px;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
     }
 
     main {
@@ -355,3 +382,5 @@ button:hover {
         font-size: 1.2rem;
     }
 }
+
+
